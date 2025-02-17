@@ -1,0 +1,18 @@
+/* Styles for the footer */
+footer {
+    background-color: #e5e5e5;  /* Light gray background */
+    color: #aaa;  /* Light gray text color */
+    padding: 1rem;  /* Padding around the content */
+    text-align: center;  /* Center-align the text */
+    position: fixed;  /* Keep footer at the bottom of the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%;  /* Full width of the viewport */
+    z-index: 1000;  /* Ensure footer is above other content */
+    transition: transform 0.3s ease-in-out;  /* Smooth transition for hiding/showing */
+}
+
+/* Styles for hiding the footer */
+footer.hide {
+    transform: translateY(100%);  /* Move the footer down by 100% of its height */
+}

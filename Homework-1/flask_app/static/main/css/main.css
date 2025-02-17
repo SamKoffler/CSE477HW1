@@ -1,0 +1,164 @@
+/* Define color variables for consistent use throughout the stylesheet */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --text-color: #333333;
+    --footer-color: #2c3e50;
+}
+
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* Main content area styles */
+main {
+    padding: 2% 10% 4% 10%; /* Increased bottom padding */
+}
+
+/* Container for profile information */
+.profile-container {
+    display: flex;
+    max-height: 50vh;
+    min-height: 200px;
+    max-width: 80vw;
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+/* Styles for the profile image container */
+.profile-image {
+    flex: 0 0 40%;  /* This makes the image take up 40% of the container width */
+    max-height: 50vh;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Styles for the profile image */
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+/* Styles for the profile text information */
+.profile-info {
+    flex: 0 0 58%;  /* This makes the text take up 58% of the container width */
+    overflow-y: auto;
+    padding: 1rem;
+    text-align: justify;
+    max-height: 50vh;  /* Match container height */
+    border: 1px solid #eee;  /* Optional: adds a subtle border around the text area */
+}
+
+/* Styles for the profile info heading */
+.profile-info h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Container for fun fact section */
+.fun-fact {
+    width: 80vw;
+    margin: 3rem auto;
+    text-align: center;
+    clear: both; /* Ensure it clears any floated elements */
+}
+
+/* Styles for the primary fun fact */
+.fun-fact .primary-fact {
+    font-size: 1.8rem;  /* Makes the main fact larger */
+    margin-bottom: 0.5rem;  /* Adds space between the facts */
+}
+
+/* Styles for the secondary fun fact */
+.fun-fact .secondary-fact {
+    font-size: 1rem;  /* Keep secondary fact at normal size */
+    color: #666;  /* Optional: slightly muted color for secondary fact */
+}
+
+/* Styles for "more to come" section */
+.more-to-come {
+    width: 80vw;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Styles for divider line */
+.divider {
+    width: 80vw;
+    margin: 2rem auto;
+    border: none;
+    border-top: 2px solid #cccccc;
+    position: relative;
+    z-index: 0;
+}
+
+/* Styles for secondary divider line */
+.divider2 {
+    width: 80vw;
+    border: none;
+    border-top: 2px solid #cccccc;
+    position: relative;
+}
+
+/* Styles for projects introduction section */
+.projects-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Styles for projects intro heading */
+.projects-intro h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for projects intro paragraph */
+.projects-intro p {
+    color: #666;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 650px) {
+    /* Adjust profile container for mobile */
+    .profile-container {
+        flex-direction: column;
+        max-height: none;
+        min-height: auto; /* Remove minimum height on mobile */
+    }
+
+    /* Adjust profile image and info for mobile */
+    .profile-image, .profile-info {
+        width: 80vw;
+        max-height: none; /* Allow content to expand fully on mobile */
+        overflow-y: visible;
+    }
+
+    /* Set fixed height for profile image on mobile */
+    .profile-image {
+        height: 300px;
+        max-height: 50vh;
+    }
+
+    /* Remove vertical scroll on profile info for mobile */
+    .profile-info {
+        overflow-y: visible;
+    }
+
+    /* Adapt fun fact to not overlap for mobile */
+    .fun-fact {
+        margin-top: 2rem; /* Adjust top margin on mobile if needed */
+    }
+}
